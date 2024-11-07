@@ -9,7 +9,7 @@ function Chatbot() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const result = await axios.post('http://127.0.0.1:8000/query', { question });
+            const result = await axios.post('https://deploybackt3iic3103.onrender.com/query', { question });
             setResponse(result.data.answer);
         } catch (error) {
             console.error("Error en la solicitud:", error);
